@@ -12,26 +12,17 @@
 \***************************************************************************************************************************/
 
 jQuery(document).ready(function ($) {
-    
-    //console.log('si');  
-    //var listNumberUser = userNumberInsert();
-    // console.log(listNumberUser);
 
-    // Setup
     var listNumberRandom = checkNum();
     alert( 'I numeri da memorizzare sono : ' + listNumberRandom );
 
     setTimeout( function() {
 
-        var listNumberUser = userNumberInsert(); 
-        
-        
+        var listNumberUser = userNumberInsert();   
         var elementiUguali = [];
         var elementiDiversi = [];
 
-        for ( var i = 0; i < listNumberRandom.length; i++) {
-            
-            
+        for ( var i = 0; i < listNumberRandom.length; i++ ) {       
 
             if ( listNumberRandom.includes( listNumberUser[i] ) ) {
 
@@ -42,20 +33,15 @@ jQuery(document).ready(function ($) {
                 elementiDiversi.push( listNumberUser[i] );
 
             }
-            
-            
+                      
         }
 
         console.log( 'Lista numeri random : ' + listNumberRandom);
         console.log( 'Numeri inseriti dall utente : ' + listNumberUser);
         console.log( 'Gli elementi uguali sono : ' + elementiUguali);
         console.log( 'Gli elementi diversi sono : ' + elementiDiversi);
-            
-        
+                  
     }, 30000);
-
-    
-  
 
 });  // <------ End Page
 
