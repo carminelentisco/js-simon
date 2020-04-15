@@ -14,8 +14,32 @@
 jQuery(document).ready(function ($) {
     
     //console.log('si');
-
     
+    console.log( checkNum() );
 
 
 });  // <------ End Page
+
+function randomNum( min, max ) {
+    
+    return Math.floor( Math.random() * ( max - min + 1 ) + min ) ;
+
+}
+
+function checkNum() {
+
+    var listNum = [];
+
+    while ( listNum.length !== 5 ) {
+        
+        var randomNumber = randomNum( 1, 5 );
+        
+        if ( listNum.includes(randomNumber) !== true ) {
+
+            listNum.push( randomNumber );
+        }
+
+    }
+
+    return listNum;
+}
